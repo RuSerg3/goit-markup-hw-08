@@ -1,0 +1,33 @@
+.customers__list {
+  display: flex;
+
+  gap: 30px;
+}
+
+.customers__item {
+  width: 170px;
+  height: 92px;
+}
+
+.customers__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  fill: var(--icon-fill);
+  border: 1px solid var(--icon-fill);
+  border-radius: 5px;
+
+  &:hover,
+  &:focus {
+    fill: var(--acc-col);
+    border: 1px solid var(--acc-col);
+  }
+}
+
+.customers__logo {
+  display: block;
+}

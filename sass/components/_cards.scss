@@ -1,0 +1,77 @@
+// cards
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 30px;
+}
+
+.card {
+  background-color: var(--card-bcg-col);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.card__link {
+  &:hover,
+  &:focus {
+    color: inherit;
+
+    .card__overlay,
+    .card__overlay {
+      transform: translate(0, 0);
+    }
+  }
+}
+
+.card__description {
+  padding: 20px 24px;
+  border: 1px solid var(--card-border-col);
+  border-top: none;
+}
+
+.card__title {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+
+.card__type {
+  font-size: 16px;
+  line-height: 1.88;
+  color: var(--alt-col);
+}
+
+.card__box {
+  overflow: hidden;
+  position: relative;
+}
+
+.card__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+
+  top: 0;
+  left: 0;
+
+  background-color: var(--card-over-bcg-col);
+  color: var(--hero-col);
+
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  overflow: auto;
+
+  transform: translate(0, 100%);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,0 +1,73 @@
+.staff {
+  background-color: var(--alt-bcg-col);
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.staff__item {
+  display: block;
+  width: 270px;
+  padding-bottom: 30px;
+
+  background-color: var(--m-bcg-col);
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.staff__list {
+  display: flex;
+  column-gap: 30px;
+  flex-wrap: wrap;
+}
+
+.staff__name {
+  margin-top: 30px;
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+.staff__position {
+  margin-bottom: 16px;
+
+  color: var(--alt-col);
+  line-height: 1.19;
+}
+
+.staff__social-media-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.staff__social-media-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.staff__social-media-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50% 50%;
+  fill: var(--icon-fill);
+
+  &:hover,
+  &:focus {
+    background-color: var(--acc-col);
+    fill: var(--btn-alt-col);
+  }
+}
+
+.staff__social-media-icon {
+  display: block;
+}

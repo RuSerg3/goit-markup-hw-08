@@ -1,0 +1,24 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: var(--f-bcg-col);
+}
+
+.footer {
+  .container {
+    display: flex;
+  }
+}
+
+.footer__title {
+  display: block;
+  color: var(--logo-f-col);
+
+  margin-bottom: 20px;
+
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: 700;
+}

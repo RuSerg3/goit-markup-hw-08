@@ -1,0 +1,29 @@
+.social-netw {
+  padding-top: 15px;
+  margin-left: 70px;
+  color: var(--logo-f-col);
+}
+
+.social-netw__list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-netw__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-netw__link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-netw__icon {
+  fill: var(--logo-f-col);
+}
+
+.social-netw__link {
+  @extend .staff__social-media-link;
+}

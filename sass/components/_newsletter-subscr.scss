@@ -1,0 +1,48 @@
+.newsletter {
+  width: 570px;
+
+  padding-top: 15px;
+  margin-left: 93px;
+}
+
+.newsletter__input {
+  padding: 15px 16px;
+  width: 358px;
+  height: 50px;
+
+  background-color: transparent;
+  border: 1px solid var(--join-us-bcg-col);
+  border-radius: 4px;
+
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+
+  color: #fff;
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+
+    color: var(--foot-alph-col);
+  }
+}
+
+.newsletter__box {
+  display: flex;
+  gap: 12px;
+}
+
+.newsletter__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 200px;
+  height: 50px;
+}
+
+.newsletter__icon {
+  margin-left: 10px;
+}

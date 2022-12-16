@@ -1,17 +1,24 @@
+// header logo
 .logo {
-  display: block;
+  display: flex;
 
-  font-family: Raleway, sans-serif;
-  color: $colorAccent;
+  margin-right: 93px;
+  font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.19;
+  line-height: 1.17;
+  text-decoration: none;
+  align-items: center;
+}
 
-  &-black {
-    color: $colorLogoBlack;
-  }
+.header__logo {
+  color: var(--logo-h-col);
+}
 
-  &-white {
-    color: $colorHeaderBg;
-  }
+.logo__acc {
+  color: var(--acc-col);
+}
+
+.footer__logo {
+  margin-bottom: 20px;
 }

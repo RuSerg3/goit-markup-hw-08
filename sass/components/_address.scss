@@ -1,0 +1,21 @@
+.address-info__item {
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+.footer__logo,
+.address-info__data {
+  color: var(--logo-f-col);
+}
+
+.address-info__list {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+}
+
+.address-info__data_contact {
+  color: var(--foot-alph-col);
+}

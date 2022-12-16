@@ -1,4 +1,42 @@
-@import 'utils/module';
-@import 'base/module';
-@import 'components/module';
-@import 'layouts/module';
+@import "./utils/variable";
+@import "./utils/animations";
+@import "./base/base";
+@import "./base/visually-hiden";
+@import "./components/container";
+@import "./components/section";
+@import "./components/header";
+@import "./components/logo";
+@import "./components/hero";
+@import "./components/button";
+@import "./components/abilities";
+@import "./components/services.scss";
+@import "./components/staff";
+@import "./components/customers";
+@import "./components/footer";
+@import "./components/link";
+@import "./components/address";
+@import "./components/our-social-netw";
+@import "./components/newsletter-subscr";
+@import "./components/filter";
+@import "./components/cards";
+@import "./components/backdrop";
+@import "./components/modal";
+@import "./components/user-contact-data";
+
+/* Палитра
+
+main    bcg-color: #fff;
+alt     bcg-color: #F5F4FA;
+footer  bcg-color: #2F303A;
+card    bcg-color: #fff;
+
+main    color: #212121;
+alt     color: #757575;
+accent  color: #2196F3;
+
+logo    color: #000000;
+               #2196F3;
+               #FFFFFF;
+
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif;*/

@@ -1,0 +1,23 @@
+/* all button */
+.btn {
+  padding: 10px;
+
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  color: var(--hero-col);
+  background-color: var(--acc-col);
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  &:hover,
+  &:focus {
+    background-color: var(--btn-hover-bcg-col);
+    cursor: pointer;
+  }
+}
