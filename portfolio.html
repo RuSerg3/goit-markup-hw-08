@@ -18,16 +18,16 @@
 <body>
   <!-- Header -->
   <header class="header">
-    <div class="container">
+    <div class="container header__container">
+
       <nav class="header__nav">
         <a class="logo header__logo" href="./index.html"><span class="logo__acc">Web</span>Studio</a>
-
-        <ul class="list navigation">
+        <ul class="list navigation header__navigation">
           <li class="navigation__item">
-            <a class="link" href="./index.html">Студія</a>
+            <a class="link " href="./index.html">Студія</a>
           </li>
-          <li class="navigation__item">
-            <a class="link link_active-page" href="./portfolio.html">Портфоліо</a>
+          <li class="navigation__item link_active-page">
+            <a class="link" href="./portfolio.html">Портфоліо</a>
           </li>
           <li class="navigation__item">
             <a class="link" href="">Контакти</a>
@@ -37,31 +37,98 @@
 
       <ul class="list contacts">
         <li class="contacts__item">
-          <a class="link contacts__mail" href="mailto:info@devstudio.com">
-            <svg class="contacts__icon" width="16px" height="12px">
+          <a class="link contacts__mail header__contact-link" href="mailto:info@devstudio.com">
+            <svg class="icon-envelope contacts__icon icon-envelope_tablet">
               <use href="./imagies/icons.svg#icon-envelope"></use>
             </svg>
             info@devstudio.com
           </a>
         </li>
         <li class="contacts__item">
-          <a class="link contacts__tel" href="tel:+380961111111">
-            <svg class="contacts__icon" width="10px" height="16px">
-              <use href="./imagies/icons.svg#icon-smartphone"></use>
+          <a class="link contacts__tel header__contact-link" href="tel:+380961111111">
+            <svg class="icon-smartphone contacts__icon icon-smartphone_tablet">
+              <use href=" ./imagies/icons.svg#icon-smartphone"></use>
             </svg>
             +38 096 111 11 11</a>
         </li>
       </ul>
+
+      <button class="burger-menu-button js-open-menu" type="button">
+        <svg class="burger-icon" width="40px" height="40px">
+          <use href="./imagies/icons.svg#icon-burger"></use>
+        </svg>
+      </button>
+
+      <!-- Modal-menu -->
+      <div class="modal-menu js-menu-container" id="mobile-menu">
+        <div class="container modal-menu__container ">
+
+
+          <button class="modal-menu__close-button js-close-menu" type="button">
+            <svg class="modal-menu__close-icon" width="40px" height="40px">
+              <use href="./imagies/icons.svg#icon-close-menu"></use>
+            </svg>
+          </button>
+
+          <ul class="list navigation navigation_modal-menu">
+            <li class="navigation__item navigation__item_modal">
+              <a class="link " href="./index.html">Студія</a>
+            </li>
+            <li class="navigation__item navigation__item_modal">
+              <a class="link modal-active-page" href="./portfolio.html">Портфоліо</a>
+            </li>
+            <li class="navigation__item navigation__item_modal">
+              <a class="link" href="">Контакти</a>
+            </li>
+          </ul>
+
+          <div class="modal-menu__contact-box">
+            <ul class="list contacts contacts_modal-menu">
+              <li class="contacts__item contacts__item_mobile">
+                <a class="link contacts__tel contacts__tel_acc" href="tel:+380961111111">
+                  <svg class="contacts__icon" width="10px" height="16px">
+                    <use href="./imagies/icons.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11</a>
+              </li>
+
+              <li class="contacts__item contacts__item_mobile">
+                <a class="link contacts__mail" href="mailto:info@devstudio.com">
+                  <svg class="contacts__icon" width="16px" height="12px">
+                    <use href="./imagies/icons.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+
+            </ul>
+
+            <ul class="list modal-menu__social-network-list">
+              <li class="modal-menu__social-network-item">
+                <a class="link modal-menu__social-network-link" href="">Instagram</a>
+              </li>
+              <li class="modal-menu__social-network-item">
+                <a class="link modal-menu__social-network-link" href="">Twitter</a>
+              </li>
+              <li class="modal-menu__social-network-item">
+                <a class="link modal-menu__social-network-link" href="">Facebook</a>
+              </li>
+              <li class="modal-menu__social-network-item">
+                <a class="link modal-menu__social-network-link" href="">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
-
   <!-- Main -->
   <main>
     <section class="section">
       <div class="container">
-        <!-- Спрятать заголовок -->
+       
         <h1 class="filter-title_visually-hiden">Наші работи</h1>
-        <!-- / -->
+        
 
         <ul class=" list filter-list">
           <li>
@@ -87,13 +154,27 @@
           <li class="card card-list__item">
             <a class="link card__link" href="">
               <div class="card__box">
-                <img src="./imagies/portfolio/tehnokriak.jpg" alt="Веб-сайт" width="370" height="295" />
+                <picture>
 
+                  <source
+                    srcset="./imagies/portfolio/technokryak/technocryak-450.jpg 450w, ./imagies/portfolio/technokryak/technocryak-450@2x.jpg 900w"
+                    media="(max-width: 767px)" sizes="(min-width: 450px) 450px, 100vw" type="image/jpeg">
+                  <source
+                    srcset="./imagies/portfolio/technokryak/technocryak-370.jpg 370w, ./imagies/portfolio/technokryak/technocryak-370@2x.jpg 740w"
+                    media="(min-width: 1200px)" sizes="370px" type="image/jpeg">
+                  <source
+                    srcset="./imagies/portfolio/technokryak/technocryak-354.jpg 354w, ./imagies/portfolio/technokryak/technocryak-354@2x.jpg 708w"
+                    media="(min-width: 768px)" sizes="354px" type="image/jpeg">
+
+
+
+                  <img src="./imagies/portfolio/technokryak/tehnokriak.jpg" alt="Веб-сайт" />
+
+                </picture>
                 <p class="card__overlay">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
-                      функціоналу та сервісів. Все це дозволить відвідувачу
-                      отримати вичерпні відомості про компанію чи приватну
-                      особу.
+                  функціоналу та сервісів. Все це дозволить відвідувачу
+                  отримати вичерпні відомості про компанію чи приватну особу.
                 </p>
               </div>
 
@@ -107,12 +188,27 @@
           <li class="card card-list__item">
             <a class="link card__link" href="">
               <div class="card__box">
-                <img src="./imagies/portfolio/no-vs-gs.jpg" alt="Игра в баскетбол" width="370" height="295" />
+
+                <picture>
+                  <source
+                    srcset="./imagies/portfolio/poster-new-orlean/poster-450.jpg 450w, ./imagies/portfolio/poster-new-orlean/poster-450@2x.jpg 900w"
+                    media="(max-width: 767px)" sizes="(min-width: 450px) 450px, 100vw" type="image/jpeg">
+                  <source
+                    srcset="./imagies/portfolio/poster-new-orlean/poster-370.jpg 370w, ./imagies/portfolio/poster-new-orlean/poster370@2x.jpg 740w"
+                    media="(min-width: 1200px)" sizes="370px" type="image/jpeg">
+                  <source
+                    srcset="./imagies/portfolio/poster-new-orlean/poster-354.jpg 354w, ./imagies/portfolio/poster-new-orlean/poster-354@2x.jpg 708w"
+                    media="(min-width: 768px)" sizes="354px" type="image/jpeg">
+
+
+
+                  <img src="./imagies/portfolio/poster-new-orlean/poster.jpg" alt="Игра в баскетбол" />
+                </picture>
+
                 <p class="card__overlay">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем
-                      функціоналу та сервісів. Все це дозволить відвідувачу
-                      отримати вичерпні відомості про компанію чи приватну
-                      особу.
+									Ресурс пропонує комплексні пропозиції з різним рівнем
+                  функціоналу та сервісів. Все це дозволить відвідувачу
+                  отримати вичерпні відомості про компанію чи приватну особу.
                 </p>
               </div>
               <div class="card__description">
@@ -127,12 +223,27 @@
           <li class="card card-list__item">
             <a class="link card__link" href="">
               <div class="card__box">
-                <img src="./imagies/portfolio/seafood.jpg" alt="Логотип рестоана" width="370" height="295" />
+                <picture>
+                  <source
+                    srcset="./imagies/portfolio/seafood/seafood-450.jpg 450w, ./imagies/portfolio/seafood/seafood-450@2x.jpg 900w"
+                    media="(max-width: 767px)" sizes="(min-width: 450px) 450px, 100vw" type="image/jpeg">
+                  <source
+                    srcset="./imagies/portfolio/seafood/seafood-370.jpg 370w, ./imagies/portfolio/seafood/seafood-370@2x.jpg 740w"
+                    media="(min-width: 1200px)" sizes="370px" type="image/jpeg">
+
+                  <source
+                    srcset="./imagies/portfolio/seafood/seafood-354.jpg 354w, ./imagies/portfolio/seafood/seafood-354@2x.jpg 708w"
+                    media="(min-width: 768px)" sizes="354px" type="image/jpeg">
+
+
+                  <img src="./imagies/portfolio/seafood/seafood.jpg" alt="Логотип ресторана" />
+
+                </picture>
+
                 <p class="card__overlay">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем
-                      функціоналу та сервісів. Все це дозволить відвідувачу
-                      отримати вичерпні відомості про компанію чи приватну
-                      особу.
+									Ресурс пропонує комплексні пропозиції з різним рівнем
+                  функціоналу та сервісів. Все це дозволить відвідувачу
+                  отримати вичерпні відомості про компанію чи приватну особу.
                 </p>
               </div>
 
@@ -146,12 +257,26 @@
           <li class="card card-list__item">
             <a class="link card__link" href="">
               <div class="card__box">
-                <img src="./imagies/portfolio/prime.jpg" alt="Реклама наушников" width="370" height="295" />
+
+                <picture>
+                  <source
+                    srcset="./imagies/portfolio/prime/prime-450.jpg 450w, ./imagies/portfolio/prime/prime-450@2x.jpg 900w"
+                    media="(max-width: 767px)" sizes="(min-width: 450px) 450px, 100vw" type="image/jpeg">
+                  <source
+                    srcset="./imagies/portfolio/prime/prime-370.jpg 370w, ./imagies/portfolio/prime/prime-370@2x.jpg 740w"
+                    media="(min-width: 1200px)" sizes="370px" type="image/jpeg">
+                  <source
+                    srcset="./imagies/portfolio/prime/prime-354.jpg 354w, ./imagies/portfolio/prime/prime-354@2x.jpg 708w"
+                    media="(min-width: 768px)" sizes="354px" type="image/jpeg">
+
+
+                  <img src="./imagies/portfolio/prime/prime.jpg" alt="Реклама наушников" />
+                </picture>
+
                 <p class="card__overlay">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем
-                      функціоналу та сервісів. Все це дозволить відвідувачу
-                      отримати вичерпні відомості про компанію чи приватну
-                      особу.
+									Ресурс пропонує комплексні пропозиції з різним рівнем
+                  функціоналу та сервісів. Все це дозволить відвідувачу
+                  отримати вичерпні відомості про компанію чи приватну особу.
                 </p>
               </div>
 
@@ -165,12 +290,27 @@
           <li class="card card-list__item">
             <a class="link card__link" href="">
               <div class="card__box">
-                <img src="./imagies/portfolio/boxes.jpg" alt="Коробки" width="370" height="295" />
+
+
+                <picture>
+                  <source
+                    srcset="./imagies/portfolio/boxes/boxes-450.jpg 450w, ./imagies/portfolio/boxes/boxes-450@2x.jpg 900w"
+                    media="(max-width: 767px)" sizes="(min-width: 450px) 450px, 100vw" type="image/jpeg">
+                  <source
+                    srcset="./imagies/portfolio/boxes/boxes-370.jpg 370w, ./imagies/portfolio/boxes/boxes-370@2x.jpg 740w"
+                    media="(min-width: 1200px)" sizes="370px" type="image/jpeg">
+                  <source
+                    srcset="./imagies/portfolio/boxes/boxes-354.jpg 354w, ./imagies/portfolio/boxes/boxes-354@2x.jpg 708w"
+                    media="(min-width: 768px)" sizes="354px" type="image/jpeg">
+
+
+                  <img src="./imagies/portfolio/boxes/boxes.jpg" alt="Коробки" />
+                </picture>
+
                 <p class="card__overlay">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем
-                      функціоналу та сервісів. Все це дозволить відвідувачу
-                      отримати вичерпні відомості про компанію чи приватну
-                      особу.
+									Ресурс пропонує комплексні пропозиції з різним рівнем
+                  функціоналу та сервісів. Все це дозволить відвідувачу
+                  отримати вичерпні відомості про компанію чи приватну особу.
                 </p>
               </div>
 
@@ -184,12 +324,26 @@
           <li class="card card-list__item">
             <a class="link card__link" href="">
               <div class="card__box">
-                <img src="./imagies/portfolio/inspiration.jpg" alt="Веб-сайт" width="370" height="295" />
+
+                <picture>
+                  <source
+                    srcset="./imagies/portfolio/inspiration/inspiration-450.jpg 450w, ./imagies/portfolio/inspiration/inspiration-450@2x.jpg 900w"
+                    media="(max-width: 767px)" sizes="(min-width: 450px) 450px, 100vw" type="image/jpeg">
+                  <source
+                    srcset="./imagies/portfolio/inspiration/inspiration-370.jpg 370w, ./imagies/portfolio/inspiration/inspiration-370@2x.jpg 740w"
+                    media="(min-width: 1200px)" sizes="370px" type="image/jpeg">
+                  <source
+                    srcset="./imagies/portfolio/inspiration/inspiration-354.jpg 354w, ./imagies/portfolio/inspiration/inspiration-354@2x.jpg 708w"
+                    media="(min-width: 768px)" sizes="354px" type="image/jpeg">
+
+
+                  <img src="./imagies/portfolio/inspiration/inspiration.jpg" alt="Веб-сайт" />
+                </picture>
+
                 <p class="card__overlay">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем
-                      функціоналу та сервісів. Все це дозволить відвідувачу
-                      отримати вичерпні відомості про компанію чи приватну
-                      особу.
+									Ресурс пропонує комплексні пропозиції з різним рівнем
+                  функціоналу та сервісів. Все це дозволить відвідувачу
+                  отримати вичерпні відомості про компанію чи приватну особу.
                 </p>
               </div>
 
@@ -203,12 +357,26 @@
           <li class="card card-list__item">
             <a class="link card__link" href="">
               <div class="card__box">
-                <img src="./imagies/portfolio/limited-edition.jpg" alt="Страницы журнала" width="370" height="295" />
+
+                <picture>
+                  <source
+                    srcset="./imagies/portfolio/limited-edition/limited-edition-450.jpg 450w, ./imagies/portfolio/limited-edition/limited-edition-450@2x.jpg 900w"
+                    media="(max-width: 767px)" sizes="(min-width: 450px) 450px, 100vw" type="image/jpeg">
+                  <source
+                    srcset="./imagies/portfolio/limited-edition/limited-edition-370.jpg 370w, ./imagies/portfolio/limited-edition/limited-edition-370@2x.jpg 740w"
+                    media="(min-width: 1200px)" sizes="370px" type="image/jpeg">
+                  <source
+                    srcset="./imagies/portfolio/limited-edition/limited-edition-354.jpg 354w, ./imagies/portfolio/limited-edition/limited-edition-354@2x.jpg 708w"
+                    media="(min-width: 768px)" sizes="354px" type="image/jpeg">
+
+
+                  <img src="./imagies/portfolio/limited-edition/limited-edition.jpg" alt="Страницы журнала" />
+                </picture>
+
                 <p class="card__overlay">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем
-                      функціоналу та сервісів. Все це дозволить відвідувачу
-                      отримати вичерпні відомості про компанію чи приватну
-                      особу.
+									Ресурс пропонує комплексні пропозиції з різним рівнем
+                  функціоналу та сервісів. Все це дозволить відвідувачу
+                  отримати вичерпні відомості про компанію чи приватну особу.
                 </p>
               </div>
 
@@ -222,12 +390,25 @@
           <li class="card card-list__item">
             <a class="link card__link" href="">
               <div class="card__box">
-                <img src="./imagies/portfolio/lab.jpg" alt="Логотип проекта" width="370" height="295" />
+
+                <picture>
+                  <source srcset="./imagies/portfolio/lab/lab-450.jpg 450w, ./imagies/portfolio/lab/lab-450@2x.jpg 900w"
+                    media="(max-width: 767px)" sizes="(min-width: 450px) 450px, 100vw" type="image/jpeg">
+
+                  <source srcset="./imagies/portfolio/lab/lab-370.jpg 370w, ./imagies/portfolio/lab/lab-370@2x.jpg 740w"
+                    media="(min-width: 1200px)" sizes="370px" type="image/jpeg">
+
+                  <source srcset="./imagies/portfolio/lab/lab-354.jpg 354w, ./imagies/portfolio/lab/lab-354@2x.jpg 708w"
+                    media="(min-width: 768px)" sizes="354px" type="image/jpeg">
+
+
+                  <img src="./imagies/portfolio/lab/lab.jpg" alt="Логотип проекта" />
+                </picture>
+
                 <p class="card__overlay">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем
-                      функціоналу та сервісів. Все це дозволить відвідувачу
-                      отримати вичерпні відомості про компанію чи приватну
-                      особу.
+									Ресурс пропонує комплексні пропозиції з різним рівнем
+                  функціоналу та сервісів. Все це дозволить відвідувачу
+                  отримати вичерпні відомості про компанію чи приватну особу.
                 </p>
               </div>
 
@@ -241,13 +422,27 @@
           <li class="card card-list__item">
             <a class="link card__link" href="">
               <div class="card__box">
-                <img src="./imagies/portfolio/growing-business.jpg" alt="Страница приложения" width="370"
-                  height="295" />
+
+                <picture>
+
+                  <source
+                    srcset="./imagies/portfolio/growing-business/growing-business-450.jpg 450w, ./imagies/portfolio/growing-business/growing-business-450@2x.jpg 900w"
+                    media="(max-width: 767px)" sizes="(min-width: 450px) 450px, 100vw" type="image/jpeg">
+                  <source
+                    srcset="./imagies/portfolio/growing-business/growing-business-370.jpg 370w, ./imagies/portfolio/growing-business/growing-business-370@2x.jpg 740w"
+                    media="(min-width: 1200px)" sizes="370px" type="image/jpeg">
+                  <source
+                    srcset="./imagies/portfolio/growing-business/growing-business-354.jpg 354w, ./imagies/portfolio/growing-business/growing-business-354@2x.jpg 708w"
+                    media="(min-width: 768px)" sizes="354px" type="image/jpeg">
+
+
+                  <img src="./imagies/portfolio/growing-business/growing-business.jpg" alt="Страница приложения" />
+                </picture>
+
                 <p class="card__overlay">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем
-                      функціоналу та сервісів. Все це дозволить відвідувачу
-                      отримати вичерпні відомості про компанію чи приватну
-                      особу.
+									Ресурс пропонує комплексні пропозиції з різним рівнем
+                  функціоналу та сервісів. Все це дозволить відвідувачу
+                  отримати вичерпні відомості про компанію чи приватну особу.
                 </p>
               </div>
 
@@ -264,7 +459,7 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
+    <div class="container footer__container">
       <div class="address-info">
         <a class="logo footer__logo" href="./index.html"><span class="logo__acc">Web</span>Studio</a>
         <address>
@@ -340,6 +535,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="./mobile-menu.js"></script>
 </body>
 
 </html>

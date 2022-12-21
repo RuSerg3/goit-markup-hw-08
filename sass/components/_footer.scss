@@ -3,12 +3,7 @@
   padding-bottom: 60px;
 
   background-color: var(--f-bcg-col);
-}
-
-.footer {
-  .container {
-    display: flex;
-  }
+  text-align: center;
 }
 
 .footer__title {
@@ -21,4 +16,29 @@
   font-size: 14px;
   line-height: 1.14;
   font-weight: 700;
+}
+
+// tablet
+
+@media screen and (min-width: 768px) {
+  .footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px 165px;
+  }
+}
+
+// desktop
+
+@media screen and (min-width: 1200px) {
+  .footer {
+    text-align: start;
+  }
+
+  .footer__container {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 0px 0px;
+  }
 }

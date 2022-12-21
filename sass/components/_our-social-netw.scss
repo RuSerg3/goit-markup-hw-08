@@ -1,6 +1,4 @@
 .social-netw {
-  padding-top: 15px;
-  margin-left: 70px;
   color: var(--logo-f-col);
 }
 
@@ -26,4 +24,20 @@
 
 .social-netw__link {
   @extend .staff__social-media-link;
+}
+
+// mobil
+@media screen and (max-width: 767px) {
+  .social-netw {
+    margin-bottom: 60px;
+  }
+}
+
+// Desktop
+@media screen and (min-width: 1200px) {
+  .social-netw {
+    padding-top: 15px;
+    margin-left: 70px;
+    color: var(--logo-f-col);
+  }
 }

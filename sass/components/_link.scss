@@ -3,4 +3,5 @@
   &:focus {
     color: var(--acc-col);
   }
+  @extend %animation;
 }

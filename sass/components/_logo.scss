@@ -2,11 +2,9 @@
 .logo {
   display: flex;
 
-  margin-right: 93px;
+  // margin-right: 93px;
   font-family: "Raleway";
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.17;
   text-decoration: none;
   align-items: center;
 }
@@ -21,4 +19,20 @@
 
 .footer__logo {
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1199px) {
+  .logo {
+    @include font-line(24px, 28.18px);
+  }
+  .footer__logo {
+    justify-content: center;
+  }
+}
+
+// desktop
+@media screen and (min-width: 1200px) {
+  .logo {
+    @include font-line(26px, 35.96px);
+  }
 }

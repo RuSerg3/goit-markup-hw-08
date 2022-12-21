@@ -1,13 +1,9 @@
 .filter-title_visually-hiden {
   @extend %visually-hiden;
 }
+
 .filter-list {
   display: flex;
-  flex-basis: 575px;
-  margin-bottom: 50px;
-
-  column-gap: 8px;
-  justify-content: center;
 }
 
 .filter-list__item {
@@ -16,6 +12,9 @@
 
   font-family: inherit;
   font-weight: 500;
+
+  @include font-line(16px, 26px);
+
   font-size: 16px;
   line-height: 1.6;
   text-align: center;
@@ -34,5 +33,32 @@
       0px 2px 2px rgba(0, 0, 0, 0.12);
     color: var(--btn-alt-col);
     cursor: pointer;
+  }
+}
+
+// Mobile
+@media screen and (max-width: 767px) {
+  .filter-list {
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+  }
+}
+
+// Tablet
+@media screen and (min-width: 768px) {
+  .filter-list {
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 30px;
+  }
+}
+
+// Desktop
+
+@media screen and (min-width: 1200px) {
+  .filter-list {
+    gap: 8px;
+    margin-bottom: 50px;
   }
 }
